@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gabriela Rego Jamhour — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F9F8F5;
+    --surface: #FFFFFF;
+    --border: #E8E5DE;
+    --border-strong: #D4CEBF;
+    --text-primary: #1A1916;
+    --text-secondary: #6B6860;
+    --text-tertiary: #A09D96;
+    --accent: #6B8F71;
+    --accent-light: #EEF3EF;
+    --accent-mid: #8EAD94;
+    --accent-dark: #4A6B50;
+    --tag-bg: #F0EDE6;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 60px;
+    background: rgba(249, 248, 245, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text-primary); }
+
+  .nav-cta {
+    background: var(--text-primary);
+    color: var(--bg) !important;
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.875rem !important;
+    transition: opacity 0.2s !important;
+  }
+  .nav-cta:hover { opacity: 0.8; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background: var(--accent-light);
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    border: 1px solid #C8DAC9;
+  }
+
+  .hero-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    max-width: 820px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--text-primary);
+    color: var(--bg);
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1.5px solid var(--border-strong);
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  }
+  .btn-secondary:hover { border-color: var(--text-primary); background: rgba(26,25,22,0.04); transform: translateY(-1px); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    animation: scrollBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(4px); }
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(to bottom, transparent, var(--text-tertiary));
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 7rem 2rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3.5rem;
+  }
+
+  .about-text p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+  }
+
+  .about-text p strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stat-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-item:first-child { border-top: 1px solid var(--border); }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .trait-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2rem;
+  }
+
+  .trait-pill {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: var(--tag-bg);
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+  }
+
+  /* PROJECTS */
+  .projects-bg {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .projects-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .project-category-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .project-category-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .project-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .project-card:hover {
+    border-color: var(--accent-mid);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(107, 143, 113, 0.1);
+  }
+
+  .project-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .project-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .icon-tech { background: #EEF3EF; }
+  .icon-business { background: #EEF0F6; }
+  .icon-hybrid { background: #F6EEF0; }
+
+  .project-arrow {
+    color: var(--text-tertiary);
+    font-size: 1rem;
+    transition: color 0.2s, transform 0.2s;
+    margin-top: 4px;
+  }
+  .project-card:hover .project-arrow { color: var(--accent); transform: translate(2px, -2px); }
+
+  .project-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .project-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    flex: 1;
+    font-weight: 300;
+  }
+
+  .project-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    background: var(--tag-bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  /* EXPERIENCE */
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 5rem;
+    margin-top: 3.5rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .timeline-item:first-child { border-top: 1px solid var(--border); }
+
+  .timeline-year {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    padding-top: 3px;
+    letter-spacing: 0.02em;
+  }
+
+  .timeline-content { }
+
+  .timeline-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+  }
+
+  .timeline-org {
+    font-size: 0.85rem;
+    color: var(--accent-dark);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .skills-section { }
+
+  .skills-block {
+    margin-bottom: 2rem;
+  }
+
+  .skills-block-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-chip {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    font-weight: 400;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .skill-chip:hover { border-color: var(--accent-mid); color: var(--accent-dark); }
+
+  /* CONTACT */
+  .contact-bg {
+    background: var(--text-primary);
+  }
+
+  .contact-bg .section-label { color: var(--accent-mid); }
+
+  .contact-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: #F9F8F5;
+    margin-bottom: 1rem;
+    max-width: 540px;
+  }
+
+  .contact-title em { font-style: italic; color: var(--accent-mid); }
+
+  .contact-sub {
+    color: #8A8780;
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 420px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #2E2D2A;
+    text-decoration: none;
+    transition: color 0.2s;
+    color: #F9F8F5;
+  }
+
+  .contact-link:first-child { border-top: 1px solid #2E2D2A; }
+  .contact-link:hover { color: var(--accent-mid); }
+
+  .contact-link-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4D4C49;
+    margin-bottom: 2px;
+  }
+
+  .contact-link-value {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .contact-link-arrow {
+    font-size: 1rem;
+    color: #3D3C39;
+    transition: transform 0.2s, color 0.2s;
+  }
+  .contact-link:hover .contact-link-arrow { transform: translate(2px, -2px); color: var(--accent-mid); }
+
+  /* FOOTER */
+  footer {
+    background: var(--text-primary);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #2E2D2A;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-family: 'DM Serif Display', serif;
+    color: #3D3C39;
+    font-size: 0.9rem;
+  }
+
+  .footer-note {
+    color: #3D3C39;
+    font-size: 0.78rem;
+  }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-up-delay-1 { transition-delay: 0.1s; }
+  .fade-up-delay-2 { transition-delay: 0.2s; }
+  .fade-up-delay-3 { transition-delay: 0.3s; }
+  .fade-up-delay-4 { transition-delay: 0.4s; }
+  .fade-up-delay-5 { transition-delay: 0.5s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .hero { padding: 7rem 1.25rem 4rem; }
+    section { padding: 5rem 1.25rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .exp-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .projects-header { flex-direction: column; align-items: flex-start; }
+    footer { padding: 1.5rem 1.25rem; }
+  }
+
+  @media (max-width: 500px) {
+    .project-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">GRJ</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section style="position: relative; padding: 0;">
+  <div class="hero">
+    <div class="hero-eyebrow fade-up">
+      <span class="hero-eyebrow-dot"></span>
+      Valencia, Spain — Open to internships
+    </div>
+    <h1 class="hero-title fade-up fade-up-delay-1">
+      Where <em>systems</em> thinking<br>meets business impact.
+    </h1>
+    <p class="hero-sub fade-up fade-up-delay-2">
+      Double degree in Computer Science and Business Administration. I build things that work — and I understand why they should.
+    </p>
+    <div class="hero-actions fade-up fade-up-delay-3">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label fade-up">About</p>
+    <h2 class="section-title fade-up fade-up-delay-1">Hybrid by design,<br>not by accident.</h2>
+
+    <div class="about-grid">
+      <div class="about-text fade-up fade-up-delay-2">
+        <p>I'm Gabriela — a student of <strong>Ingeniería Informática + ADE</strong> at Universitat Politècnica de València, pursuing a dual degree that most people see as unusual but I see as a clear advantage.</p>
+        <p>I grew up navigating different environments and cultures, which gave me something that's hard to teach: the ability to <strong>adapt quickly, read situations clearly, and get to work independently.</strong></p>
+        <p>My instinct is to look at problems from both ends — what's technically feasible and what actually creates value. That's the lens I bring to every project I touch, whether it's a data pipeline, a business case, or a product decision.</p>
+        <p>I'm actively looking for internships in <strong>technology, product, or consulting</strong> — roles where I can contribute analytically from day one and keep learning fast.</p>
+
+        <div class="trait-pills">
+          <span class="trait-pill">Analytical thinker</span>
+          <span class="trait-pill">Fast learner</span>
+          <span class="trait-pill">Structured communicator</span>
+          <span class="trait-pill">Bilingual (ES / EN)</span>
+          <span class="trait-pill">Comfortable with ambiguity</span>
+        </div>
+      </div>
+
+      <div class="about-stats fade-up fade-up-delay-3">
+        <div class="stat-item">
+          <span class="stat-num">2-in-1</span>
+          <span class="stat-label">Degrees pursued simultaneously — CS + Business</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Countries lived in — built adaptability early</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Full-stack</span>
+          <span class="stat-label">From database design to market analysis</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2026</span>
+          <span class="stat-label">Targeted graduation — seeking summer internships</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-bg">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <p class="section-label fade-up">Projects</p>
+        <h2 class="section-title fade-up fade-up-delay-1" style="margin-bottom: 0;">Work that reflects<br>how I actually think.</h2>
+      </div>
+    </div>
+
+    <!-- TECHNICAL -->
+    <div class="project-category-title fade-up">💻 Technical</div>
+    <div class="project-grid">
+      <div class="project-card fade-up fade-up-delay-1">
+        <div class="project-card-top">
+          <div class="project-icon icon-tech">🗄️</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Library Management System</div>
+          <p class="project-desc">Designed and implemented a relational database for a public library — modeling entities, normalizing schema to 3NF, and building a query layer that reduced lookup time by over 60% compared to the original flat-file approach.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">SQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">ER Modeling</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-2">
+        <div class="project-card-top">
+          <div class="project-icon icon-tech">⚙️</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Inventory Automation Script</div>
+          <p class="project-desc">Built a Python automation tool that processes raw supplier CSV exports, validates data integrity, flags anomalies, and outputs clean inventory reports — eliminating hours of manual work per week for a small local business.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Data Cleaning</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-3">
+        <div class="project-card-top">
+          <div class="project-icon icon-tech">🌐</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Web App — Task Tracker</div>
+          <p class="project-desc">Full-stack task management application with user authentication, project grouping, and deadline tracking. Built as a solo project to practice end-to-end development — from schema design to deployed interface.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">SQLite</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUSINESS -->
+    <div class="project-category-title fade-up">📊 Business</div>
+    <div class="project-grid">
+      <div class="project-card fade-up fade-up-delay-1">
+        <div class="project-card-top">
+          <div class="project-icon icon-business">📈</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Market Entry Analysis — EdTech</div>
+          <p class="project-desc">Conducted a full market sizing and competitive landscape study for a hypothetical EdTech expansion into Southern Europe. Included TAM/SAM/SOM estimates, Porter's Five Forces, and a go-to-market recommendation with clear assumptions.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">Market Research</span>
+          <span class="tag">Financial Modelling</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Strategy</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-2">
+        <div class="project-card-top">
+          <div class="project-icon icon-business">💼</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Operations Case Study</div>
+          <p class="project-desc">Analysed a logistics company's operational bottlenecks using process mapping and cost breakdown. Proposed a restructured routing model that reduced estimated last-mile delivery costs by 18% — backed by data, not guesswork.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">Operations</span>
+          <span class="tag">Process Mapping</span>
+          <span class="tag">Cost Analysis</span>
+          <span class="tag">PowerPoint</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HYBRID -->
+    <div class="project-category-title fade-up">🔗 Combined</div>
+    <div class="project-grid">
+      <div class="project-card fade-up fade-up-delay-1">
+        <div class="project-card-top">
+          <div class="project-icon icon-hybrid">📊</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Data Dashboard — Student Initiative Metrics</div>
+          <p class="project-desc">Built an interactive dashboard for a student association to track engagement across events and platforms. Combined data engineering (ETL pipeline) with KPI design — ensuring the metrics shown were the ones that actually mattered.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">Python</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">KPI Design</span>
+          <span class="tag">Notion API</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-2">
+        <div class="project-card-top">
+          <div class="project-icon icon-hybrid">🔬</div>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div>
+          <div class="project-name">Product Teardown — Fintech UX</div>
+          <p class="project-desc">Deconstructed the onboarding flows of three leading European fintech apps. Combined behavioural analysis, heuristic evaluation, and conversion benchmarks to produce a structured teardown report with prioritised improvement recommendations.</p>
+        </div>
+        <div class="project-footer">
+          <span class="tag">Product Analysis</span>
+          <span class="tag">UX Research</span>
+          <span class="tag">Benchmarking</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE + EDUCATION -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label fade-up">Background</p>
+    <h2 class="section-title fade-up fade-up-delay-1">Education &amp; experience.</h2>
+
+    <div class="exp-grid">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item fade-up">
+            <div class="timeline-year">2022 – Now</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Doble Grado: Ingeniería Informática + ADE</div>
+              <div class="timeline-org">Universitat Politècnica de València</div>
+              <p class="timeline-desc">A rigorous dual programme covering software engineering, algorithms, data structures, corporate finance, marketing strategy, and operations. Learning to speak two languages fluently — the technical and the commercial.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-up fade-up-delay-1">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Dashboard Lead — Student Association</div>
+              <div class="timeline-org">UPV Campus</div>
+              <p class="timeline-desc">Led the internal analytics effort for a student-run organisation. Designed metrics, built the reporting system from scratch, and presented findings to the board each semester.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-up fade-up-delay-2">
+            <div class="timeline-year">Ongoing</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Independent Projects &amp; Coursework</div>
+              <div class="timeline-org">Self-directed</div>
+              <p class="timeline-desc">Consistently working on side projects at the intersection of software and business — product teardowns, automation tools, case study research. Building the habit of shipping, not just studying.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-section fade-up fade-up-delay-2">
+        <div class="skills-block">
+          <div class="skills-block-title">Engineering</div>
+          <div class="skills-list">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">React</span>
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">Linux</span>
+            <span class="skill-chip">Data Modelling</span>
+          </div>
+        </div>
+
+        <div class="skills-block" style="margin-top: 2rem;">
+          <div class="skills-block-title">Business</div>
+          <div class="skills-list">
+            <span class="skill-chip">Financial Analysis</span>
+            <span class="skill-chip">Market Research</span>
+            <span class="skill-chip">Operations</span>
+            <span class="skill-chip">Strategy Frameworks</span>
+            <span class="skill-chip">Excel / Sheets</span>
+            <span class="skill-chip">Deck Building</span>
+          </div>
+        </div>
+
+        <div class="skills-block" style="margin-top: 2rem;">
+          <div class="skills-block-title">Tools &amp; Environments</div>
+          <div class="skills-list">
+            <span class="skill-chip">Figma</span>
+            <span class="skill-chip">Notion</span>
+            <span class="skill-chip">Streamlit</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">Tableau (learning)</span>
+          </div>
+        </div>
+
+        <div class="skills-block" style="margin-top: 2rem;">
+          <div class="skills-block-title">Languages</div>
+          <div class="skills-list">
+            <span class="skill-chip">Spanish — Native</span>
+            <span class="skill-chip">English — Fluent</span>
+            <span class="skill-chip">Portuguese — Heritage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-bg" style="padding: 7rem 2rem;">
+  <div class="container">
+    <p class="section-label">Get in touch</p>
+    <h2 class="contact-title">Let's build something <em>worth building.</em></h2>
+    <p class="contact-sub">I'm open to internship opportunities in technology, product, or consulting. If you're working on something interesting — I'd like to hear about it.</p>
+
+    <div class="contact-links">
+      <a href="mailto:gabriela@example.com" class="contact-link">
+        <div>
+          <div class="contact-link-label">Email</div>
+          <div class="contact-link-value">gabriela.regojamhour@gmail.com</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://linkedin.com/in/gabrielaregojamhour" target="_blank" rel="noopener" class="contact-link">
+        <div>
+          <div class="contact-link-label">LinkedIn</div>
+          <div class="contact-link-value">linkedin.com/in/gabrielaregojamhour</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://github.com/gabrielaregojamhour" target="_blank" rel="noopener" class="contact-link">
+        <div>
+          <div class="contact-link-label">GitHub</div>
+          <div class="contact-link-value">github.com/gabrielaregojamhour</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Gabriela Rego Jamhour</span>
+    <span class="footer-note">Valencia, Spain — 2025</span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const name = card.querySelector('.project-name')?.textContent;
+      if (name) console.log('Project clicked:', name);
+    });
+  });
+</script>
+</body>
+</html>
