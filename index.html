@@ -1036,13 +1036,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const name = card.querySelector('.project-name')?.textContent;
-      if (name) console.log('Project clicked:', name);
-    });
-  });
 </script>
 </body>
 </html>
