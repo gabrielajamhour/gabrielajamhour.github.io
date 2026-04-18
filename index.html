@@ -375,6 +375,24 @@
     gap: 1rem;
   }
 
+ .project-grid-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.project-card.main-project {
+  width: 100%;
+}
+
+.project-grid-secondary {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  max-width: 420px;
+  gap: 1.5rem;
+}
+
   .project-icon {
     width: 40px;
     height: 40px;
@@ -764,60 +782,50 @@
     </div>
 
     <!-- TECHNICAL -->
-    <div class="project-category-title fade-up">💻 Technical</div>
+    <!-- TECHNICAL -->
+<div class="project-category-title fade-up">💻 Technical</div>
 
-<div class="project-card fade-up fade-up-delay-3">
-        <div class="project-card-top">
-          <div class="project-icon icon-tech">⚓</div>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div>
-          <div class="project-name">Interactive Navigation Tool — Gibraltar Nautical Charts</div>
-          <p class="project-desc">Designed and developed an interactive desktop application for studying nautical charts of the Strait of Gibraltar, using Java and JavaFX. Implemented drawing and measurement tools (points, lines, arcs, distance calculation), zoomable map interaction, and a problem-based learning system simulating real exam scenarios. Built user authentication, session tracking, and profile management backed by SQLite.</p>
-          <div class="project-links">
-            <a href="https://github.com/gabrielajamhour/IPC-Gibraltar-2025" target="_blank" rel="noopener" class="project-link">View Code ↗</a>
-          </div>
-        </div>
-        <div class="project-footer">
-          <span class="tag">Java</span>
-          <span class="tag">JavaFX</span>
-          <span class="tag">UI/UX</span>
-          <span class="tag">Desktop App</span>
-          <span class="tag">SQLite</span>
-        </div>
-      </div>
-   
-     <div></div>
-   
-    <div class="project-grid">
-      <div class="project-card fade-up fade-up-delay-1">
-        <div class="project-card-top">
-          <div class="project-icon icon-tech"></div>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div>
-          <div class="project-name">Coming soon</div>
-          <p class="project-desc"></p>
-        </div>
-        <div class="project-footer">
-          <span class="tag"></span>
-        </div>
-      </div>
-
-      <div class="project-card fade-up fade-up-delay-2">
-        <div class="project-card-top">
-          <div class="project-icon icon-tech"></div>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div>
-          <div class="project-name">Coming soon</div>
-          <p class="project-desc"></p>
-        </div>
-        <div class="project-footer">
-          <span class="tag"></span>
-        </div>
+<!-- Main full-width project -->
+<div class="project-grid-single">
+  <div class="project-card main-project fade-up fade-up-delay-3">
+    <div class="project-card-top">
+      <div class="project-icon icon-tech">⚓</div>
+      <span class="project-arrow">↗</span>
+    </div>
+    <div>
+      <div class="project-name">Interactive Navigation Tool — Gibraltar Nautical Charts</div>
+      <p class="project-desc">
+        Designed and developed an interactive desktop application for studying nautical charts of the Strait of Gibraltar, using Java and JavaFX. Implemented drawing and measurement tools (points, lines, arcs, distance calculation), zoomable map interaction, and a problem-based learning system simulating real exam scenarios. Built user authentication, session tracking, and profile management backed by SQLite.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/gabrielajamhour/IPC-Gibraltar-2025" target="_blank" rel="noopener" class="project-link">View Code ↗</a>
       </div>
     </div>
+    <div class="project-footer">
+      <span class="tag">Java</span>
+      <span class="tag">JavaFX</span>
+      <span class="tag">UI/UX</span>
+      <span class="tag">Desktop App</span>
+      <span class="tag">SQLite</span>
+    </div>
+  </div>
+</div>
+
+<!-- One smaller secondary card -->
+<div class="project-grid-secondary">
+  <div class="project-card fade-up fade-up-delay-1">
+    <div class="project-card-top">
+      <div class="project-icon icon-tech"></div>
+      <span class="project-arrow">↗</span>
+    </div>
+    <div>
+      <div class="project-name">Coming soon</div>
+      <p class="project-desc">
+        A new technical project will be added here soon.
+      </p>
+    </div>
+  </div>
+</div>
 
     <!-- BUSINESS -->
     <div class="project-category-title fade-up">📊 Business</div>
@@ -911,7 +919,7 @@
             </div>
           </div>
          
-         <div class="timeline-item fade-up fade-up-delay-2">[
+         <div class="timeline-item fade-up fade-up-delay-2">
             <div class="timeline-year">2025 – 2026</div>
             <div class="timeline-content">
               <div class="timeline-title">Consultant</div>
