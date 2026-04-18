@@ -393,6 +393,25 @@
   gap: 1.5rem;
 }
 
+ .technical-grid {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+}
+
+.main-project {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .technical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-project {
+    grid-column: span 1;
+  }
+}
+
   .project-icon {
     width: 40px;
     height: 40px;
@@ -782,11 +801,9 @@
     </div>
 
     <!-- TECHNICAL -->
-    <!-- TECHNICAL -->
+<!-- TECHNICAL -->
 <div class="project-category-title fade-up">💻 Technical</div>
-
-<!-- Main full-width project -->
-<div class="project-grid-single">
+<div class="project-grid technical-grid">
   <div class="project-card main-project fade-up fade-up-delay-3">
     <div class="project-card-top">
       <div class="project-icon icon-tech">⚓</div>
@@ -809,19 +826,16 @@
       <span class="tag">SQLite</span>
     </div>
   </div>
-</div>
 
-<!-- One smaller secondary card -->
-<div class="project-grid-secondary">
   <div class="project-card fade-up fade-up-delay-1">
     <div class="project-card-top">
-      <div class="project-icon icon-tech"></div>
+      <div class="project-icon icon-tech">⌛</div>
       <span class="project-arrow">↗</span>
     </div>
     <div>
       <div class="project-name">Coming soon</div>
       <p class="project-desc">
-        A new technical project will be added here soon.
+        Another technical project is currently in progress and will be added here soon.
       </p>
     </div>
   </div>
@@ -869,32 +883,15 @@
     <div class="project-category-title fade-up">🔗 Combined</div>
     <div class="project-grid">
       <div class="project-card fade-up fade-up-delay-1">
-        <div class="project-card-top">
-          <div class="project-icon icon-hybrid"></div>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div>
-          <div class="project-name">Coming soon</div>
-          <p class="project-desc"></p>
-        </div>
-        <div class="project-footer">
-          <span class="tag"></span>
-        </div>
-      </div>
-
-      <div class="project-card fade-up fade-up-delay-2">
-        <div class="project-card-top">
-          <div class="project-icon icon-hybrid"></div>
-          <span class="project-arrow">↗</span>
-        </div>
-        <div>
-          <div class="project-name">Coming soon</div>
-          <p class="project-desc"></p>
-        </div>
-        <div class="project-footer">
-          <span class="tag"></span>
-        </div>
-      </div>
+  <div class="project-card-top">
+    <div class="project-icon icon-hybrid">🧩</div>
+    <span class="project-arrow">↗</span>
+  </div>
+  <div>
+    <div class="project-name">Coming soon</div>
+    <p class="project-desc">A project combining technical and business thinking will be added here soon.</p>
+  </div>
+</div>
     </div>
   </div>
 </section>
