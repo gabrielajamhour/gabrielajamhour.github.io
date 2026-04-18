@@ -433,6 +433,25 @@
     letter-spacing: 0.02em;
   }
 
+ .project-links {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+ }
+
+.project-link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent-dark);
+  text-decoration: none;
+  transition: opacity 0.2s;
+ }
+
+.project-link:hover {
+  opacity: 0.75;
+ }
+
   /* EXPERIENCE */
   .exp-grid {
     display: grid;
@@ -787,13 +806,17 @@
           <span class="project-arrow">↗</span>
         </div>
         <div>
-          <div class="project-name">Web App — Task Tracker</div>
-          <p class="project-desc">Full-stack task management application with user authentication, project grouping, and deadline tracking. Built as a solo project to practice end-to-end development — from schema design to deployed interface.</p>
+          <div class="project-name">Interactive Navigation Tool — Gibraltar Nautical Charts</div>
+          <p class="project-desc">Designed and developed an interactive desktop application for studying nautical charts of the Strait of Gibraltar, using Java and JavaFX. Implemented drawing and measurement tools (points, lines, arcs, distance calculation), zoomable map interaction, and a problem-based learning system simulating real exam scenarios. Built user authentication, session tracking, and profile management backed by SQLite.</p>
+          <div class="project-links">
+            <a href="https://github.com/gabrielajamhour/IPC-Gibraltar-2025" target="_blank" rel="noopener" class="project-link">View Code ↗</a>
+          </div>
         </div>
         <div class="project-footer">
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
+          <span class="tag">Java</span>
+          <span class="tag">JavaFX</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Desktop App</span>
           <span class="tag">SQLite</span>
         </div>
       </div>
