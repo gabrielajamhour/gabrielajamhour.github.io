@@ -804,12 +804,10 @@
 <!-- TECHNICAL -->
 <div class="project-category-title fade-up">💻 Technical</div>
 <div class="project-grid technical-grid">
-  <div class="project-card main-project fade-up fade-up-delay-3">
+  <div class="project-card main-project fade-up fade-up-delay-3 clickable-card" data-link="https://github.com/gabrielajamhour/IPC-Gibraltar-2025">
     <div class="project-card-top">
       <div class="project-icon icon-tech">⚓</div>
-      <span class="project-arrow">
-       <a href="https://github.com/gabrielajamhour/IPC-Gibraltar-2025" target="_blank" rel="noopener" class="project-link">↗</a>
-      </span>
+      <span class="project-arrow">↗</span>
     </div>
     <div>
       <div class="project-name">Interactive Navigation Tool — Gibraltar Nautical Charts</div>
@@ -1059,6 +1057,16 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.clickable-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      const link = card.dataset.link;
+      if (link) {
+        window.open(link, '_blank');
+      }
+    });
+  });
 </script>
 </body>
 </html>
