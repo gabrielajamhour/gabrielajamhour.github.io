@@ -468,6 +468,72 @@
       opacity: 0.7;
     }
 
+    .project-preview {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      background: #F3F0EA;
+    }
+
+    .project-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.35s ease;
+    }
+
+    .project-card:hover .project-preview img {
+      transform: scale(1.02);
+    }
+
+    .project-content {
+      padding: 1.5rem 1.75rem 1.75rem;
+    }
+
+    .project-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .project-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .project-desc-short {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    .project-card.editorial {
+      padding: 0;
+      overflow: hidden;
+      background: #FCFBF8;
+    }
+
+    .editorial-tech {
+      border-top: 3px solid #94A8C8;
+    }
+
+    .editorial-business {
+      border-top: 3px solid #B59B6A;
+    }
+
+    .editorial-creative {
+      border-top: 3px solid #9AB79A;
+    }
+
     .clickable-card {
       cursor: pointer;
     }
@@ -994,35 +1060,47 @@
       <!-- TECHNICAL PROJECTS -->
       <div class="project-category-title fade-up">💻 Technical Projects</div>
       <div class="project-grid technical-grid">
-        <div class="project-card main-project fade-up fade-up-delay-3 clickable-card"
+        <div class="project-card editorial-tech main-project fade-up fade-up-delay-3 clickable-card"
           data-link="https://github.com/gabrielajamhour/IPC-Gibraltar-2025">
-          <div class="project-card-top">
-            <div class="project-icon icon-tech">⚓</div>
-            <span class="project-arrow">↗</span>
+
+          <div class="project-preview">
+            <img src="images/gibraltar-preview.png" alt="Gibraltar project preview">
           </div>
-          <div>
-            <div class="project-name">Interactive Navigation Tool — Gibraltar Nautical Charts</div>
-            <p class="project-desc">
-              Designed and developed an interactive desktop application for studying nautical charts of the Strait of
-              Gibraltar, using Java and JavaFX. Implemented drawing and measurement tools (points, lines, arcs, distance
-              calculation), zoomable map interaction, and a problem-based learning system simulating real exam
-              scenarios. Built user authentication, session tracking, and profile management backed by SQLite.
+
+          <div class="project-content">
+
+            <div class="project-label">
+              technical project ⚓
+            </div>
+
+            <div class="project-name">
+              Interactive Navigation Tool — Gibraltar Nautical Charts
+            </div>
+
+            <div class="project-subtitle">
+              Interactive desktop application for nautical chart learning and navigation problem-solving.
+            </div>
+
+            <p class="project-desc-short">
+              Developed with Java and JavaFX, the project translates real navigation exam requirements into intuitive
+              map-based interaction tools, including measurements, drawing systems, zoomable charts, and session
+              tracking.
             </p>
-            <p class="project-desc">
-              The project focused on translating real navigation exam requirements into intuitive interactive tools,
-              prioritizing usability and clarity in map interaction.
-            </p>
+
             <div class="project-links">
               <a href="https://github.com/gabrielajamhour/IPC-Gibraltar-2025" target="_blank" rel="noopener"
-                class="project-link">View Code ↗</a>
+                class="project-link">
+                View Code ↗
+              </a>
             </div>
-          </div>
-          <div class="project-footer">
-            <span class="tag">Java</span>
-            <span class="tag">JavaFX</span>
-            <span class="tag">UI/UX</span>
-            <span class="tag">Desktop App</span>
-            <span class="tag">SQLite</span>
+
+            <div class="project-footer" style="margin-top: 1.4rem;">
+              <span class="tag">Java</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">Desktop App</span>
+              <span class="tag">SQLite</span>
+            </div>
+
           </div>
         </div>
 
@@ -1042,7 +1120,7 @@
       <!-- PRODUCT & DATA PROJECTS -->
       <div class="project-category-title fade-up">📊 Product & Data Projects</div>
       <div class="project-grid">
-        <div class="project-card fade-up fade-up-delay-1">
+        <div class="project-card editorial-business fade-up fade-up-delay-1">
           <div class="project-card-top">
             <div class="project-icon icon-business">🏦</div>
           </div>
@@ -1062,7 +1140,7 @@
           </div>
         </div>
 
-        <div class="project-card fade-up fade-up-delay-2">
+        <div class="project-card editorial-business fade-up fade-up-delay-2">
           <div class="project-card-top">
             <div class="project-icon icon-business">🛒</div>
           </div>
@@ -1086,7 +1164,7 @@
       <!-- CREATIVE / EXPERIMENTAL WEB PROJECTS -->
       <div class="project-category-title fade-up">🔗 Creative Web Projects</div>
       <div class="project-grid">
-        <div class="project-card creative-card fade-up fade-up-delay-1">
+        <div class="project-card editorial-creative creative-card fade-up fade-up-delay-1">
           <div class="creative-preview">
             <img src="images/my-little-corner-preview.jpg" alt="My Little Corner preview">
           </div>
