@@ -2,9 +2,9 @@
 
 ## Overview
 
-This is my personal portfolio website.
+This repository contains the source code for my personal portfolio website.
 
-It’s designed not just to showcase projects, but to reflect how I approach problems — at the intersection of engineering and business.
+The portfolio was designed to reflect not only the projects I’ve built, but also the way I approach ideas, problem-solving, and creativity through technology.
 
 ## Live Website
 
@@ -12,42 +12,46 @@ It’s designed not just to showcase projects, but to reflect how I approach pro
 
 ---
 
-## Focus
+## What You'll Find
 
-The portfolio highlights:
+### 💻 Technical Projects
+Projects focused on software development, computer science fundamentals, and practical implementation.
 
-- Technical projects and implementations  
-- Business and strategy work  
-- Experiences that combine both perspectives  
+### 📊 Business & Analytical Work
+Work related to economics, finance, data analysis, and business-oriented problem solving.
 
-The goal is to make clear not only *what I’ve done*, but *how I think and work*.
+### 🌱 Personal & Creative Projects
+Projects built from personal interests and ideas — including digital spaces, creative concepts, and experiments that combine technology with individuality and design.
 
 ---
 
-## Structure
+## Website Sections
 
-- **Experience** → practical work across technical and business contexts  
-- **Projects** → selected work with a focus on problem-solving and execution  
-- **Skills** → engineering, business, and tools  
-- **Contact** → ways to get in touch  
+- **About Me** → background, interests, and academic focus  
+- **Experience** → technical and business-related experiences  
+- **Projects** → selected projects with context, technologies, and objectives  
+- **Skills** → technologies, tools, and areas of knowledge  
+- **Contact** → professional links and contact information  
 
 ---
 
 ## Tech Stack
 
-- HTML  
-- CSS  
+- React / TypeScript  
+- HTML & CSS  
+- Git & GitHub  
 - GitHub Pages  
 
 ---
 
-## Notes
+## Purpose
 
-This portfolio is continuously evolving as I build new projects and refine how I present my work.
+This portfolio is continuously evolving as I develop new projects, gain experience, and refine how I present my work and ideas.
 
 ---
 
 ## Contact
 
 - LinkedIn: https://linkedin.com/in/gabrielaregojamhour  
-- Email: gabrielajamhour@gmail.com  
+- GitHub: https://github.com/gabrielajamhour  
+- Email: gabrielajamhour@gmail.com
