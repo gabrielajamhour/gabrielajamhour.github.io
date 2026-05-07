@@ -48,8 +48,6 @@ Projects built from personal interests and ideas — including digital spaces, c
 
 This portfolio is continuously evolving as I develop new projects, gain experience, and refine how I present my work and ideas.
 
-The goal is not only to showcase technical skills, but also to communicate curiosity, adaptability, and a multidisciplinary mindset.
-
 ---
 
 ## Contact
