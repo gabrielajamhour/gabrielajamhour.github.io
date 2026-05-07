@@ -4,7 +4,7 @@
 
 This repository contains the source code for my personal portfolio website.
 
-The portfolio was designed to reflect not only the projects I’ve built, but also the way I approach problem-solving — combining engineering, analytical thinking, and business strategy.
+The portfolio was designed to reflect not only the projects I’ve built, but also the way I approach ideas, problem-solving, and creativity through technology.
 
 ## Live Website
 
@@ -20,8 +20,8 @@ Projects focused on software development, computer science fundamentals, and pra
 ### 📊 Business & Analytical Work
 Work related to economics, finance, data analysis, and business-oriented problem solving.
 
-### 🔗 Interdisciplinary Approach
-Experiences and projects that combine technology and business perspectives to create practical and impactful solutions.
+### 🌱 Personal & Creative Projects
+Projects built from personal interests and ideas — including digital spaces, creative concepts, and experiments that combine technology with individuality and design.
 
 ---
 
