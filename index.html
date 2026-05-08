@@ -534,10 +534,6 @@
       border-top: 3px solid #9AB79A;
     }
 
-    .clickable-card {
-      cursor: pointer;
-    }
-
     .project-card:hover {
       border-color: var(--accent-mid);
       transform: translateY(-3px);
@@ -1069,6 +1065,18 @@
               Built with Python, Streamlit, and Plotly, the project transforms raw supermarket pricing data 
               into clear visual insights through comparative metrics, trend exploration, and category-level analysis.
             </p>
+            <div class="project-links">
+              <a href="https://supermarket-pricing-dashboard.streamlit.app" target="_blank" rel="noopener"
+                class="project-link">
+                Visit Site ↗
+              </a>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/gabrielajamhour/Supermarket-Pricing-Dashboard" target="_blank" rel="noopener"
+                class="project-link">
+                View Code ↗
+              </a>
+            </div>
             <div class="project-footer" style="margin-top: 1.4rem;">
               <span class="tag">Python</span>
               <span class="tag">Pandas</span>
@@ -1081,8 +1089,7 @@
 
       <!-- Gibraltar Nautical Charts -->
       <div class="project-grid-single">
-        <div class="project-card editorial-tech main-project fade-up fade-up-delay-3 clickable-card"
-          data-link="https://github.com/gabrielajamhour/IPC-Gibraltar-2025">
+        <div class="project-card editorial-tech main-project fade-up fade-up-delay-3">
           <div class="project-preview">
             <img src="images/gibraltar-preview.png" alt="Gibraltar project preview">
           </div>
@@ -1379,16 +1386,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    document.querySelectorAll('.clickable-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (e.target.closest('a')) return;
-        const link = card.dataset.link;
-        if (link) {
-          window.open(link, '_blank');
-        }
-      });
-    });
   </script>
 </body>
 
